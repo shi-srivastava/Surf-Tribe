@@ -13,7 +13,7 @@ hbs.registerPartials(partials_path);
 app.get("/",(req,res) => {
     res.render("index");
 });
-app.get(".register",(req,res) => {
+app.get("/register",(req,res) => {
     res.render("register");
 });
 
