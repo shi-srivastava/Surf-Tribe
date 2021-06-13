@@ -22,19 +22,30 @@ app.set("view engine", "hbs");
 app.set("views", template_path);
 hbs.registerPartials(partials_path);
 app.get("/",(req,res) => {
-    res.render("register");
+    res.render("index");
 });
 app.get("/register",(req,res) => {
     res.render("register");
 });
 
+app.get("/login",(req,res) => {
+    res.render("login");
+});
+
 //create a new user in database
-app.post('/', async (req,res) => {
+app.post('/register', async (req,res) => {
     try{
         const password = req.body.password;
-        const cpassword = req.body.password2;
+        const cpassword = req.body.copassword;
         if(password === cpassword) {
-            const registerEmployee = new Register()
+            const registerEmployee = new Register({
+                name: req.body.name,
+                email: req.body.email,
+                password: req.body.password,
+                cpassword: req.body.copassword,
+            })
+            const registered = await registerEmployee.save();
+            res.status(201).render("index");
 
         } else {
             res.send("password is incorrect");
@@ -43,6 +54,24 @@ app.post('/', async (req,res) => {
 
     }catch (error) {
         res.status(400).send(error);
+    }
+})
+
+// login authentication
+
+app.post("/login", async(req,res) => {
+    try {
+        const email = req.body.email;
+        const password = req.body.password;
+        const userEmail = await Register.findOne({email:email});
+        if(userEmail.password===password){
+            res.status(201).render("index");
+        }else {
+            res.send("invalid login details");
+        }
+
+    } catch(error){
+        res.status(400).send("Invalid login Details");
     }
 })
 

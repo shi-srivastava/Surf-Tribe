@@ -14,9 +14,8 @@ const volunteerSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    password2:{
-        type:String,
-        required:true
+    copassword:{
+        type:String
     }
 
 })
