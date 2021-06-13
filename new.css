@@ -79,7 +79,8 @@ color: #000000;
 {
   height: auto;
   width:100%;
-  max-width:1266px ;
+  max-width:1550px ;
+  margin-left: auto;
 }
 .bottom-left {
     position: absolute;
@@ -135,7 +136,8 @@ color: #000000;
         position:absolute;
         right:0px;
         height:79vh;
-        top:18vh;
+        top:13vh;
+        
         background-color: #006686;
         flex-direction: column;
         align-items: center;
