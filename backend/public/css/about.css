@@ -1,0 +1,17 @@
+html,
+body {
+  margin: 0;
+  font-family: "PingFang SC", "Microsoft Yahei",
+    sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("assets/dan-gold-_mmd-LgBPrs-unsplash.jpg");
+  background-size: cover;
+ 
+}
