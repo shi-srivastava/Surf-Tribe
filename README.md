@@ -1,5 +1,5 @@
 # Surf-Tribe
 The beach is calling.
 
-## Pages:
-1. 
+Contributors -
+1. Priyanshi Chandra
