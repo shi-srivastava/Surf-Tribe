@@ -6,6 +6,7 @@ h2{
 }
 .beachtext{
     font-size: 24px;
+    margin-left: 10px;
 }
 .navbar-custom{
     background-color: rgba(66, 154, 189, 0.712);
