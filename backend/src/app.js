@@ -31,6 +31,12 @@ app.get("/register",(req,res) => {
 app.get("/login",(req,res) => {
     res.render("login");
 });
+app.get("/about",(req,res) => {
+    res.render("about");
+});
+app.get("/joinus",(req,res) => {
+    res.render("joinus");
+});
 
 //create a new user in database
 app.post('/register', async (req,res) => {

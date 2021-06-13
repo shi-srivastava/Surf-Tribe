@@ -1,0 +1,16 @@
+body{
+    background-image: url("../css/assets/sean-oulashin-KMn4VEeEPR8-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+h2{
+    font-family: 'Lobster', cursive;
+}
+.beachtext{
+    font-size: 24px;
+    margin-left: 10px;
+}
+.navbar-custom{
+    background-color: rgba(66, 154, 189, 0.712);
+}
