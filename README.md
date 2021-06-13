@@ -1,5 +1,8 @@
 # Surf-Tribe
 The beach is calling.
+
+ https://shi-srivastava.github.io/Surf-Tribe/
+
 ### Find Beach
 
 
