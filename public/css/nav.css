@@ -4,6 +4,70 @@
     box-sizing: border-box;
 }
 
+h2{
+    font-family: 'Lobster', cursive;
+}
+.container-fluid{
+  display: inline-flex;
+}
+.beachtext{
+    font-size: 24px;
+    margin-left: 10px;
+    align-self: right;
+}
+.navbar-custom{
+    background-color: rgba(66, 154, 189, 0.712);
+}
+.navbar-nav li{
+  float: right;
+  display: inline-flex;
+  list-style: none;
+  margin-left: 5vw;
+}
+.nav-items{
+    align-content: flex-end;
+}
+.logo{
+    display:inline-flex;
+    height: 10vh;
+    padding:0;
+    margin:0;
+}
+.navbar-brand{
+    display: flex;
+    margin-left: 5vw;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky + .container-fluid 
+{
+  padding-top: 60px;
+}
+.nav-items:hover
+{
+  background: 
+     linear-gradient(currentColor 0 0) 
+     bottom /100% var(--d, 0px) no-repeat;
+  transition: 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
 nav
 {
     display:flex;
@@ -44,6 +108,7 @@ margin-right: 5px;
 
 color: #FFFFFF;
 }
+
 button {
     width: 107px;
     height: 43px;
@@ -62,6 +127,8 @@ button {
     
      outline: none;
 }
+
+
 .nav-links button a{
     font-family: Roboto;
 font-style: normal;
@@ -96,8 +163,12 @@ color: #000000;
 
   }
   
+
+    button:hover {
+
   
   button:hover {
+
     color: #ABE6EA;
     background: transparent;
      box-shadow:none;
@@ -163,4 +234,8 @@ color: #000000;
     transform: translateX(0px);
 
   }
+
+}*/
+
 }
+
