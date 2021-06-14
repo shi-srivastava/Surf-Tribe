@@ -11,7 +11,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("assets/dan-gold-_mmd-LgBPrs-unsplash.jpg");
+  background: linear-gradient(180deg, #FFFFFF 0%, #0276B7 100%);
   background-size: cover;
  
 }

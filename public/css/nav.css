@@ -3,47 +3,63 @@
     padding: 0px;
     box-sizing: border-box;
 }
-
-nav
-{
-    display:flex;
-    justify-content: space-around;
-    box-sizing:border-box;
+h2{
+    font-family: 'Lobster', cursive;
 }
-
-nav{
-    display:flex;
-    justify-content: space-evenly;
-    align-items: stretch;
-    min-height: 8vh;
-    background-color: #006686;
-    
+.container-fluid{
+  display: inline-flex;
 }
-
+.beachtext{
+    font-size: 24px;
+    margin-left: 10px;
+    align-self: right;
+}
+.navbar-custom{
+    background-color: rgba(66, 154, 189, 0.712);
+}
+.navbar-nav li{
+  float: right;
+  display: inline-flex;
+  list-style: none;
+  margin-left: 5vw;
+}
+.nav-items{
+    align-content: flex-end;
+}
 .logo{
-    letter-spacing: 6px;
-    font-size: 35px;
+    display:inline-flex;
+    width:5vw;
+    max-height: 9vh;
+    padding: 0;
+    margin:0;
 }
-.nav-links li{
-    list-style: none;
-}
-.nav-links{
+.navbar-brand{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 55%;
-    
+    margin-left: 5vw;
 }
-.nav-links li a{
-font-family: Roboto;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-text-decoration: none;
-margin-right: 5px;
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky + .container-fluid 
+{
+  padding-top: 60px;
+}
 
-color: #FFFFFF;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 button {
     width: 107px;
     height: 43px;
@@ -62,6 +78,7 @@ button {
     
      outline: none;
 }
+
 .nav-links button a{
     font-family: Roboto;
 font-style: normal;
@@ -96,8 +113,7 @@ color: #000000;
 
   }
   
-  
-  button:hover {
+    button:hover {
     color: #ABE6EA;
     background: transparent;
      box-shadow:none;
@@ -163,4 +179,4 @@ color: #000000;
     transform: translateX(0px);
 
   }
-}
+}*/
