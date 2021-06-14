@@ -48,28 +48,22 @@
 }
 .text{
     margin: 0vw 7vw;
-    text-size-adjust:inherit;
     font-size: 20px;
 }
 .content-text{
     display:flex;
     align-items: center;
+    align-content: center;
 }
 .cleaning{
-    width: 245px;
+    width: 90vw;
     max-height: fit-content;
-    vertical-align: left;
+    align-items: center;
+    padding: 0 0;
 }
 .aboutus{
     display: block;
     min-height:max-content;
-}
-@media (max-width:750px) 
-{
-    .cleaning{
-        height: 30vh;
-        width: auto;
-    }    
 }
 
   /*Waves*/
