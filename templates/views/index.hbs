@@ -4,14 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+      *{
+        margin:0;
+      }
+      .header{
+          width: 100vw;
+          height: 80vh;
+      }
+      Hero_Image{
+        
+      }
+    </style>
+    <link rel="icon" href="css/assets/Logo.svg">
+    <title>Surf Tribe</title>
 </head>
 <body>
-     {{>navbar}}
-       <div class="container">
-            <img src="css/assets/Hero 2.jpg" alt="Nature" class="responsive" width="1266px">
+     {{>navbar_before}}
+       <div class="header">
+            <img src="css/assets/Hero 2.jpg" alt="Hero_Image" class="responsive">
             <div class="bottom-left">Surf Tribe</div>
-          </div>
-          {{>footr}}
+        </div>
+    {{>footr}}
 </body>
 </html>
