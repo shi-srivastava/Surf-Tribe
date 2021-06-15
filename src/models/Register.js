@@ -1,5 +1,9 @@
 const mongoose = require("mongoose");
 
+
+const bcrypt = require("bcryptjs");
+
+
 const volunteerSchema = new mongoose.Schema({
     name:{
         type:String,
@@ -19,6 +23,20 @@ const volunteerSchema = new mongoose.Schema({
     }
 
 })
+
+
+volunteerSchema.pre("save", async function(next) {
+    if(this.isModified("password")){
+        //console.log(`the current password is ${this.password}`);
+        this.password = await bcrypt.hash(this.password, 10);
+        //console.log(`the current password is ${this.password}`);
+        this.copassword = undefined;
+    }
+    next();
+
+
+});
+
 
 const Register = new mongoose.model("Register",volunteerSchema);
 
