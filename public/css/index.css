@@ -1,0 +1,140 @@
+
+    *{
+    margin:0;
+    }
+    html{
+    scroll-behavior: smooth;
+    }
+    .head{
+    width:100%;
+    min-height:80%;
+    }
+    .heroimg{
+    height: 100vh;
+    background-image: url("assets/Hero 2.jpg");
+    background-repeat: no-repeat;
+    align-items: left;
+    background-size:cover;
+    }
+    .maintext{
+    position: relative;
+    height: 100%;
+    }
+    .bottom-left{
+    font-size:min(30vw,30vh);
+    color: cornsilk;
+    margin-left: max(5px,6.5vw);
+    font-family: 'Stalemate', cursive;
+    text-align: left;
+    position:absolute;
+    bottom: 10px;
+    }
+    .contenthead{
+    margin-top: 10vh;
+    margin-bottom: 2vh;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size:calc(50px + 6 * ((100vw - 100px) / 680));
+    line-height: 11vh;
+    align-items: center;
+    text-align: center;
+    color: #353535;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+.contact-us{
+    background:linear-gradient(180deg, #FFFFFF 0%, #0276B7 100%);
+    display: block;
+}
+.text{
+      margin: 0vw 7vw;
+      font-size: 20px;
+      font-size: 1.5vw;
+
+}
+.content-text{
+    display:inline-grid;
+    align-items: center;
+    align-content: center;
+}
+.auimage{
+    max-height: min-content;
+    width: 98vw;
+    display: inline-grid;
+    justify-content: center;
+}
+img.cleaning{
+    max-height: initial;
+    max-width: 90vw;
+    margin: 0 0;
+    padding: auto;
+}
+
+.aboutus{
+    display: block;
+}
+
+  /*Waves*/
+.wave {
+  position:relative;
+  text-align:center;
+  background: #0275b700;
+  color:white;
+}
+.flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+  p.text{
+    font-size: 14px;
+  }
+}
