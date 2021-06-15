@@ -35,7 +35,7 @@
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size:calc(50px + 6 * ((100vw - 100px) / 680));
+    font-size: calc(50px + 6 * ((100vw - 100px) / 680));
     line-height: 11vh;
     align-items: center;
     text-align: center;
