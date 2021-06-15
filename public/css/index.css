@@ -35,7 +35,7 @@
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 66px;
+    font-size:calc(50px + 6 * ((100vw - 100px) / 680));
     line-height: 11vh;
     align-items: center;
     text-align: center;
@@ -132,9 +132,6 @@ img.cleaning{
   }
   h1 {
     font-size:24px;
-  }
-  .contenthead{
-      font-size: 32px;
   }
   p.text{
     font-size: 14px;
