@@ -28,7 +28,7 @@ body {
   z-index: 100;
   background: inherit;
   border-radius: 18px;
-  overflow: hidden;
+  overflow: none;
   
 }
 
@@ -108,7 +108,7 @@ body {
   left: 0;
   transform: skewX(-15deg);
   filter: blur(30px);
-  overflow: hidden;
+  overflow: none;
   transform: translateX(-100px);
 }
 
