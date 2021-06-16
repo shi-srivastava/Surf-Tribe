@@ -25,6 +25,9 @@ hbs.registerPartials(partials_path);
 app.get("/",(req,res) => {
     res.render("index");
 });
+app.get("/index_after", (req, res) => {
+    res.render("index_after");
+});
 app.get("/register",(req,res) => {
     res.render("register");
 });
