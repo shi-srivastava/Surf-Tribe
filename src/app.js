@@ -56,6 +56,11 @@ app.post('/register', async (req,res) => {
             })
 
             const token = await registerEmployee.generateAuthToken();
+            res.cookie("jwt", token, {
+                expire:new Date(Date.now() + 100000000),
+                httpOnly:true
+            });
+            
             const registered = await registerEmployee.save();
             
             
@@ -80,7 +85,6 @@ app.post("/login", async(req,res) => {
         const userEmail = await Register.findOne({email:email});
         const Match = bcrypt.compare(password, userEmail.password);
         const token = await userEmail.generateAuthToken();
-        console.log(token);
 
         if(Match){
             res.status(201).render("index_after");
