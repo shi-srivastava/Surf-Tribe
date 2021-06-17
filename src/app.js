@@ -51,10 +51,13 @@ app.post('/register', async (req,res) => {
                 password: password,
                 cpassword: cpassword
             })
-
+            console.log(registerEmployee);
         //password encryption or hashing
-
+            const token = await registerEmployee.generateAuthToken();
+            console.log(token);
             const registered = await registerEmployee.save();
+            
+            
             res.status(201).render("index");
 
         } else {

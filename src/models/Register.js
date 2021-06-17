@@ -20,16 +20,32 @@ const volunteerSchema = new mongoose.Schema({
     },
     copassword:{
         type:String
-    }
+    },
+    tokens:[{
+        token:{
+            type:String,
+            require:true
+
+        }
+    }]
 
 })
+const jwt = require("jsonwebtoken");
+volunteerSchema.methods.generateAuthToken = async function(){
+    try{
+        const token = jwt.sign({_id:this._id.toString()},"mynameisnishisharmaiampursuingbtechfromelectrical");
+        this.tokens = this.tokens.concat({token:token});
+        await this.save();
+        return token;
 
-
+    } catch(error){
+        res.send(error);
+        console.log(error);
+    }
+}
 volunteerSchema.pre("save", async function(next) {
     if(this.isModified("password")){
-        //console.log(`the current password is ${this.password}`);
         this.password = await bcrypt.hash(this.password, 10);
-        //console.log(`the current password is ${this.password}`);
         this.copassword = undefined;
     }
     next();
