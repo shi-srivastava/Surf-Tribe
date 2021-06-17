@@ -1,15 +1,19 @@
+require('dotenv').config();
 const express = require("express");
 const path = require("path");
 const hbs = require("hbs");
 const app = express();
 const bcrypt = require("bcryptjs");
-
 const connectDB = require('./db/conn');
 const Register = require("./models/Register");
+const cookiePar = require("cookie-parser");
+const auth = require("./middleware/auth");
+let alert = require('alert');  
 
 //connect database
 connectDB();
 app.use(express.json());
+app.use(cookiePar());
 app.use(express.urlencoded({extended:false}));
 
 
@@ -25,9 +29,23 @@ hbs.registerPartials(partials_path);
 app.get("/",(req,res) => {
     res.render("index");
 });
-app.get("/index_after", (req, res) => {
+
+app.get("/index_after",  (req,res) => {
     res.render("index_after");
 });
+
+app.get("/logout",auth, async(req,res) => {
+    try{
+        res.clearCookie("jwt");
+        console.log("log out successfully");
+        res.render("login");
+        alert("log out successfully")
+
+    }catch(error){
+        res.status(500).send(error);
+    }
+});
+
 app.get("/register",(req,res) => {
     res.render("register");
 });
@@ -55,10 +73,16 @@ app.post('/register', async (req,res) => {
                 cpassword: cpassword
             })
 
-        //password encryption or hashing
-
+            const token = await registerEmployee.generateAuthToken();
+            res.cookie("jwt", token, {
+                expire:new Date(Date.now() + 100000000),
+                httpOnly:true
+            });
+            
             const registered = await registerEmployee.save();
-            res.status(201).render("index");
+            
+            
+            res.status(201).render("index_after");
 
         } else {
             res.send("password is incorrect");
@@ -78,9 +102,14 @@ app.post("/login", async(req,res) => {
         const password = req.body.password;
         const userEmail = await Register.findOne({email:email});
         const Match = bcrypt.compare(password, userEmail.password);
-
+        const token = await userEmail.generateAuthToken();
+        res.cookie("jwt", token, {
+            expire:new Date(Date.now() + 100000000),
+            httpOnly:true
+        });
+        
         if(Match){
-            res.status(201).render("index");
+            res.status(201).render("index_after");
         }else {
             res.send("invalid login details");
         }
