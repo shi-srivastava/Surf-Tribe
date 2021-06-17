@@ -1,7 +1,11 @@
+
 const mongoose = require("mongoose");
 
+const jwt = require("jsonwebtoken");
 
 const bcrypt = require("bcryptjs");
+
+
 
 
 const volunteerSchema = new mongoose.Schema({
@@ -30,7 +34,7 @@ const volunteerSchema = new mongoose.Schema({
     }]
 
 })
-const jwt = require("jsonwebtoken");
+
 volunteerSchema.methods.generateAuthToken = async function(){
     try{
         const token = jwt.sign({_id:this._id.toString()},process.env.SECRET_KEY);
