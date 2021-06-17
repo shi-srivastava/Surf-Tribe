@@ -1,9 +1,9 @@
+require('dotenv').config();
 const express = require("express");
 const path = require("path");
 const hbs = require("hbs");
 const app = express();
 const bcrypt = require("bcryptjs");
-
 const connectDB = require('./db/conn');
 const Register = require("./models/Register");
 
@@ -54,14 +54,12 @@ app.post('/register', async (req,res) => {
                 password: password,
                 cpassword: cpassword
             })
-            console.log(registerEmployee);
-        //password encryption or hashing
+
             const token = await registerEmployee.generateAuthToken();
-            console.log(token);
             const registered = await registerEmployee.save();
             
             
-            res.status(201).render("index");
+            res.status(201).render("index_after");
 
         } else {
             res.send("password is incorrect");
@@ -81,9 +79,11 @@ app.post("/login", async(req,res) => {
         const password = req.body.password;
         const userEmail = await Register.findOne({email:email});
         const Match = bcrypt.compare(password, userEmail.password);
+        const token = await userEmail.generateAuthToken();
+        console.log(token);
 
         if(Match){
-            res.status(201).render("index");
+            res.status(201).render("index_after");
         }else {
             res.send("invalid login details");
         }
