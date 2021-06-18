@@ -16,7 +16,7 @@ h2.jo {
 .timeline {
   position: relative;
 }
-.timeline::before { /*middle line*/
+.timeline::before{ /*middle line*/
   content: "";
   background: #003cff6e;
   width: 5px;
@@ -130,10 +130,14 @@ blockquote {
     width: auto;
     margin-left: 70px;
   }
-  .timeline .timeline-item:nth-child(even) .timeline-content {
+  .timeline-item:nth-child(even) .timeline-content {
     float: none;
   }
-  .timeline .timeline-item:nth-child(odd) .timeline-content::after {
+  .timeline-item:nth-child(odd) .timeline-content {
+    margin-left: 70px;
+    margin-right: 5vw;
+  }
+  .timeline .timeline-item .timeline-content::after {
     content: "";
     position: absolute;
     border-style: solid;
@@ -144,4 +148,5 @@ blockquote {
     border-width: 10px 15px 10px 0;
     border-color: transparent #f5f5f5 transparent transparent;
   }
+}
 }
