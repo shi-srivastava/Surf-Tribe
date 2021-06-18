@@ -24,6 +24,12 @@ h2{
   list-style: none;
   margin-left: 5vw;
 }
+.btn{
+  float: right;
+  display: inline-flex;
+  list-style: none;
+  margin-left: 5vw;
+}
 .nav-items{
     align-content: flex-end;
 }
