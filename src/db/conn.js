@@ -4,9 +4,10 @@ const uri = process.env.URI;
 const connectDB = async () => {
     try {
         await mongoose.connect( uri, {
+            useNewUrlParser :true,
             useUnifiedTopology : true,
-            useCreateIndex :true,
-            useNewUrlParser :true
+            useCreateIndex :true
+            
         });
         console.log("MongoDB connected ...");
     } catch(err) {
