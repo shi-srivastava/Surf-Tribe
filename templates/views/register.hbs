@@ -9,7 +9,9 @@
 </head>
 
 <body>
+  <button class="go" onclick="goBack()"> Go Back</button>
   <div class="main">
+    
     <p class="sign" align="center">Sign Up</p>
     <form action="/register" class="form1 " method="POST">
       <input class="un " type="text" align="center" placeholder="Name" name="name">
@@ -17,8 +19,16 @@
       <input class="pass" type="password" align="center" placeholder="Password" name="password">
       <input class="pass " type="password" align="center" placeholder="Confirm Password" name="copassword">
       <button type="submit" class="submit" align="center">Sign in</button>
-        </form>   
+     
+ 
+    </form>   
+    <script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
     </div>
+    
 
 </body>
 
