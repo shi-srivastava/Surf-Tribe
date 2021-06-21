@@ -38,8 +38,8 @@ app.get("/logout",auth, async(req,res) => {
     try{
         res.clearCookie("jwt");
         console.log("log out successfully");
-        res.render("login");
-        alert("log out successfully")
+        res.render("index");
+        alert("log out successfully");
 
     }catch(error){
         res.status(500).send(error);
