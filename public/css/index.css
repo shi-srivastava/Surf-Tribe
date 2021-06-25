@@ -21,13 +21,20 @@
     height: 100%;
     }
     .bottom-left{
-    font-size:min(30vw,30vh);
-    color: cornsilk;
-    margin-left: max(5px,6.5vw);
-    font-family: 'Stalemate', cursive;
-    text-align: left;
-    position:absolute;
-    bottom: 10px;
+      font-size:30vh;
+      color: cornsilk;
+      margin-left: max(5px,6.5vw);
+      font-family: 'Stalemate', cursive;
+      text-align: left;
+      position:absolute;
+      bottom: 10px;
+    }
+    @media(max-width:670px)
+    {
+      .bottom-left{
+        font-size: 44vw;
+        line-height:110%;
+      }
     }
     .contenthead{
     margin-top: 10vh;

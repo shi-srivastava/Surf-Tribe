@@ -1,10 +1,11 @@
 *{
   box-sizing: border-box;
 }
-body {
+body 
+{
   display: flex;
-justify-content: center;
-align-items: center;
+  justify-content: center;
+  align-items: center;
   background-image: url('assets/loginimage.jpg');
   font-family: 'Ubuntu', sans-serif;
   background-size: cover;
@@ -83,8 +84,6 @@ font-family: 'Ubuntu', sans-serif;
   border: 2px solid rgba(255, 0, 0, 0.18) !important;
   
 }
-
-
 
 .submit 
 {

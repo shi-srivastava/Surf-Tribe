@@ -49,7 +49,9 @@ app.get("/logout",auth, async(req,res) => {
 app.get("/register",(req,res) => {
     res.render("register");
 });
-
+app.get("/sign", (req, res) => {
+    res.render("sign");
+});
 app.get("/login",(req,res) => {
     res.render("login");
 });
