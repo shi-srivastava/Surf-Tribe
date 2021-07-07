@@ -1,135 +1,234 @@
-html,
-body {
-  margin: 0;
-  font-family: "PingFang SC", "Microsoft Yahei",
-    sans-serif;
+*{
+  box-sizing: border-box;
 }
-
-.container {
-  width: 100vw;
-  height: 100vh;
+body 
+{
   display: flex;
-  align-items: center;
   justify-content: center;
-  background-image: url("assets/dan-gold-_mmd-LgBPrs-unsplash.jpg");
+  align-items: center;
+  background-image: url('assets/loginimage.jpg');
+  font-family: 'Ubuntu', sans-serif;
   background-size: cover;
- 
+  background-position: center;
 }
 
-.login-form {
+.main {
+  background-color: #ffffff2a;
   width: 400px;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  padding: 40px;
-  text-align: center;
-  
-  position: relative;
-  z-index: 100;
-  background: inherit;
-  border-radius: 18px;
-  overflow: hidden;
+  margin: 7em auto;
+  border-radius: 2em;
+  box-shadow: -5px 11px 35px 5px rgba(0, 0, 0, 0.493);
   
 }
-
-.login-form::before {
-  content: "";
-  font-size: 38px;
-  width: calc(100% + 20px);
-  height: calc(100% + 20px);
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  overflow: hidden;
-  background: inherit;
-  box-shadow: inset 0 0 0 200px
-    rgba(255, 255, 255, 0.25);
-  filter: blur(6px);
-  z-index: -1;
+.go {
+  position:absolute; top:0; left:0;
 }
 
-.login-form h2 {
-  font-size: 38px;
-  font-weight: 400;
-  color: #792112;
+.sign {
+  padding-top: 40px;
+  color: #8C55AA;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+}
+::placeholder{
+  color: #000000;
 }
 
-.login-form input,
-.login-form button {
-  margin: 6px 0;
-  height: 70px;
+.un {
+width: 76%;
+color:#323230;
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 1px;
+background: rgba(136, 126, 126, 0.04);
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+margin-bottom: 50px;
+margin-left: 46px;
+text-align: center;
+margin-bottom: 27px;
+font-family: 'Ubuntu', sans-serif;
+}
+
+form.form1 {
+  padding-top: 40px;
+}
+
+.pass {
+width: 76%;
+color:#000000;
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 1px;
+background: rgba(136, 126, 126, 0.04);
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+margin-bottom: 50px;
+margin-left: 46px;
+text-align: center;
+margin-bottom: 27px;
+font-family: 'Ubuntu', sans-serif;
+}
+
+
+.un:focus, .pass:focus {
+  border: 2px solid rgba(255, 0, 0, 0.18) !important;
+  
+}
+
+.submit 
+{
+  line-height: 42px;
+  padding: 0;
   border: none;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-  padding: 0 14px;
-  color: #021d11a8;
-  font-size: 18px;
-  
-}
-
-.login-form input::placeholder {
-  color: #3d5245;
-}
-
-
-.login-form button:focus,
-.login-form input:focus {
-  outline: 0;
-}
-
-.login-form button {
-  margin-top: 24px;
-  background-color: rgba(35, 170, 211, 0.411);
-  color: white;
-  position: relative;
-  overflow: hidden;
+  width: 130px;
+  height: 40px;
+  color: #8C55AA;
+  font-weight: bold;;
+  border-radius: 5em;
+  border: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-left: 35%;
+  font-size: 14px;
   cursor: pointer;
-  transition: 0.4s;
+  position: relative;
+  display: inline-block;
+  background-color: rgb(250, 235, 215);
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+.submit span {
+position: relative;
+display: block;
+width: 100%;
+height: 100%;
+}
+.submit:hover{
+background: transparent;
+background: linear-gradient(to right, #d002eba6, #ec0ea998);
+text-shadow:none;
+transition: all 500ms ease;
+color: #ffffff;
+text-shadow: #d002eba6;
+box-shadow:#fff;
+}
+.submit:hover:before {
+transition: all 500ms ease;
+height: 100%;
+}
+.submit:hover:after {
+transition: all 500ms ease;
+height: 100%;
+}
+.submit span:before,
+.submit span:after {
+position: absolute;
+content: "";
+box-shadow:
+ -1px -1px 20px 0px rgba(255,255,255,1),
+ -4px -4px 5px 0px rgba(255,255,255,1),
+ 7px 7px 20px 0px rgba(0,0,0,.4),
+ 4px 4px 5px 0px rgba(0,0,0,.3);
+}
+.submit span:before {
+left: 0;
+top: 0;
+width: 0%;
+height: .5px;
+transition: all 500ms ease;
+}
+.submit span:after {
+right: 0;
+bottom: 0;
+width: 0%;
+height: .5px;
+transition: all 500ms ease;
+}
+.submit span:hover:before {
+width: 100%;
+}
+.submit span:hover:after {
+width: 100%;
 }
 
-.login-form button:hover {
-  background-color: rgba(54, 164, 197, 0.76);
+.forgot 
+{    
+  text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.login-form button:focus {
-  outline: 0;
-}
 
-.login-form button::before,
-.login-form button::after {
-  content: "";
-  display: block;
-  width: 80px;
+.drop-shadow {
   height: 100%;
-  background: rgba(23, 103, 128, 0.3);
-  opacity: 0.5;
+  width: 100%;
+  filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.30));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.drop-shadow:before {
+  display: block;
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  transform: skewX(-15deg);
-  filter: blur(30px);
-  overflow: hidden;
-  transform: translateX(-100px);
+  top: 10em;
+  height: calc(100% - 20em);
+  width: calc(100% - 20em);
+  border-top: 2px solid rgba(225, 225, 225, 0.2);
+  border-left: 1px solid rgba(225, 225, 225, 0.1);
+  border-right: 1px solid rgba(225, 225, 225, 0.3);
+  z-index: 2;
+}
+.drop-shadow > span {
+  position: absolute;
+  z-index: 5;
+  color: white;
+  font-size: 4em;
+ 
+  padding-left: 0.375em;
+}
+a {
+  color: #1100ff;
+}
+@media (max-width: 980px) {
+  .glass {
+      clip-path: inset(5em);
+ }
+  .drop-shadow:before {
+      top: 5em;
+      width: calc(100% - 10em);
+ }
+  .drop-shadow > span {
+      font-size: 4em;
+ }
+}
+@media (max-width: 640px) {
+  .drop-shadow > span {
+      font-size: 2em;
+ }
 }
 
-.login-form button::after {
-  width: 40px;
-  background: rgba(23, 103, 128, 0.3);
-  left: 60px;
-  opacity: 0;
-  filter: blur(5px);
-}
 
-.login-form button:hover::before {
-  transition: 1s;
-  transform: translateX(320px);
-  opacity: 0.7;
-}
+@media (max-width: 600px) {
+  .main {
+      border-radius: 2em;
+  }
+}   
+  
 
-.login-form button:hover::after {
-  transition: 1s;
-  transform: translateX(320px);
-  opacity: 1;
-}
+
+
 
 

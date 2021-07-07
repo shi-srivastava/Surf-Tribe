@@ -12,14 +12,14 @@
         </title>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom fixed-top shadow p-0 bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom fixed-top shadow p-0 bg-white a-bars fa-2x">
             <div class="container-fluid ">
                 <a class="navbar-brand">
                     <div class="logo">
                         <img src="css/assets/Brand.svg" alt="Logo">
                     </div>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler bg-" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -33,34 +33,15 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="#contactus">Contact Us</a>
                         </li>
+                    </ul>    
+                    <ul class="navbar-nav navbar-right mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="/login">Log In</a>
+                            <a class="nav-link" href="/sign">Join Us</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/register">Sign Up</a>
-                        </li>
-
-        
-                    </ul>
-        
+                    </ul>     
                 </div>
             </div>
-            
         </nav>
-        <script>
-            window.onscroll = function () { myFunction() };
-
-                var navbar = document.getElementById("navbar");
-                var sticky = navbar.offsetTop;
-
-                function myFunction() {
-                    if (window.pageYOffset >= sticky) {
-                        navbar.classList.add("sticky")
-                    } else {
-                        navbar.classList.remove("sticky");
-                    }
-                }
-        </script>
         <script src="app.js"></script>
     </body>
 </html> 
