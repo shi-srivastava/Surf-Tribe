@@ -1,23 +1,47 @@
+<!DOCTYPE html>
 <html>
 
-<head>
-  <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-  <title>Sign in</title>
-</head>
-
 <body>
-  <div class="main">
-    <p class="sign" align="center">Log in</p>
-    <form action="/login" class="form1 " method="POST">
-      <input class="un " type="text" align="center" placeholder="Username" name="email">
-      <input class="pass" type="password" align="center" placeholder="Password" name="password">
-      <button type="submit" class="submit" align="center">Sign in</button>
-      <p class="forgot" align="center"><a href="#">Forgot Password?</p>   
-      </form>   
-    </div>
+
+  <p>Click the button to get your coordinates.</p>
+
+  <button onclick="getLocation()">Try It</button>
+
+  <p id="demo"></p>
+  
+
+  <script>
+    var x = document.getElementById("demo");
+
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+    }
+
+    function showError(error) {
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request for Geolocation."
+            break;
+          case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location information is unavailable."
+            break;
+          case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out."
+            break;
+          case error.UNKNOWN_ERROR:
+            x.innerHTML = "An unknown error occurred."
+            break;
+        }
+  </script>
 
 </body>
 

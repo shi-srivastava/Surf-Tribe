@@ -1,45 +1,80 @@
-
-    *{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');   
+*{
     margin:0;
     }
     html{
     scroll-behavior: smooth;
     }
-    .head{
-    width:100%;
-    min-height:80%;
+    .hero-part{
+      max-width:100vw;
+      height: fit-content;
+      position: static;
     }
-    .heroimg{
-    height: 100vh;
-    background-image: url("assets/Hero 2.jpg");
-    background-repeat: no-repeat;
-    align-items: left;
-    background-size:cover;
+    .body-content{
+      position: absolute;
+      top: 100vh;
+    }
+    .hero-part video{
+      position: absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }    
+    .overlay{
+      background:rgba(3, 83, 202, 0.25);
+      mix-blend-mode: overlay;
+      position: absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100vh;
     }
     .maintext{
-    position: relative;
-    height: 100%;
+      position:absolute;
+      display: flex;
+      padding-top: 20vh;
+      height: 100vh;
+      flex-direction: column;
+      align-content: flex-start;
+      justify-content: center;
+      z-index: 1000;
+      text-align: left;
+      vertical-align: middle;
+      margin-left: max(5px,6.5vw);
+      color: cornsilk;
     }
     .bottom-left{
       font-size:30vh;
-      color: cornsilk;
-      margin-left: max(5px,6.5vw);
-      font-family: 'Stalemate', cursive;
-      text-align: left;
-      position:absolute;
-      bottom: 10px;
+      line-height: 100%;
+      font-family: 'Allura', cursive;
+    }
+    .herotxt{
+      font-family: 'Poppins', sans-serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 4vh;
+      line-height: 100%;
+      width: 40vw;
     }
     @media(max-width:670px)
     {
       .bottom-left{
         font-size: 44vw;
-        line-height:110%;
+        line-height:100%;
+      }
+      .herotxt{
+        margin-top: 0;
+        width: 80vw;
+        font-size: 18px;
       }
     }
     .contenthead{
     margin-top: 10vh;
     margin-bottom: 2vh;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: calc(50px + 6 * ((100vw - 100px) / 680));
@@ -145,3 +180,4 @@ img.cleaning{
     font-size: 14px;
   }
 }
+
