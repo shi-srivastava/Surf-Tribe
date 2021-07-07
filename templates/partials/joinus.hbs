@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/join.css">
+</head>
+
+<body>
+    <div class="timeline">
+        <div class="container-ju">
+            <div class="timeline-item">
+                <div class="bead"></div>
+                <div class="timeline-content timeline-card js--fadeInLeft">
+                    <div class="timeline-img-header">
+                        <h2 class="jo">Who is it for?</h2>
+                    </div>
+                    <p>
+                    <ul>
+                        <li>Our cleanups are open to everybody.</li>
+                        <li>If you are older than 16 you can just come around.</li>
+                        <li>Children between 14 and 16 need the consent of the parents, if they come alone.</li>
+                        <li>Children under the age of 14 have to be joined by an adult with the right to supervise the
+                            child.</li>
+                        <li>Please read our terms and conditions carefully, before joining our cleanups.</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content timeline-card js--fadeInRight">
+                    <div class="timeline-img-header">
+                        <h2 class="jo">What can you expect?</h2>
+                    </div>
+                    <p>
+                    <ul>
+                        <li>Our cleanups last around an hour.</li>
+                        <li>It starts for everybody at the meeting point, that you can find below.</li>
+                        <li>We hand out bags and clean gloves to everybody.</li>
+                        <li>We organize the team in the beginning to assure an effective cleanup.</li>
+                        <li>After an hour at the beach we are getting together again at the meeting point.</li>
+                        <li>We weight what we collected and take everything to the next containers, to divide the trash
+                            and put it where it belongs.</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content timeline-card js--fadeInLeft">
+                    <div class="timeline-img-header">
+                        <h2 class="jo">What to bring?</h2>
+                    </div>
+                    <p>
+                    <ul>
+                        <li>Bring what you feel comfortable in.</li>
+                        <li>Be prepared of the strong sun of Barcelona.</li>
+                        <li>Wear cloths that can get dirty and comfortable shoes.</li>
+                        <li>Parents have to bring material for their children, as our gloves are only adult sizes.</li>
+                        <li>Children might also enjoy using material, such as sieves and buckets, that have to be
+                            provided by the
+                            supervising adult.</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content js--fadeInRight">
+                    <h2 class="jo">Find a beach near you</h2>
+                    <blockquote>
+                        <div class="Map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7897528.210917409!2d74.79012261529108!3d14.86925445458315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sbeaches%20in%20India!5e0!3m2!1sen!2sin!4v1624958760424!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            
+                        </div>
+                    </blockquote>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        (function () {
+                window.sr = ScrollReveal();
+                if ($(window).width() < 768) {
+
+                    if ($('.timeline-content').hasClass('js--fadeInLeft')) {
+                        $('.timeline-content').removeClass('js--fadeInLeft').addClass('js--fadeInRight');
+                    }
+
+                    sr.reveal('.js--fadeInRight',
+                        {
+                            origin: 'right',
+                            distance: '300px',
+                            easing: 'ease-in-out',
+                            duration: 800,
+                        });
+
+                } else {
+
+                    sr.reveal('.js--fadeInLeft',
+                        {
+                            origin: 'left',
+                            distance: '300px',
+                            easing: 'ease-in-out',
+                            duration: 800,
+                        });
+
+                    sr.reveal('.js--fadeInRight',
+                        {
+                            origin: 'right',
+                            distance: '300px',
+                            easing: 'ease-in-out',
+                            duration: 800,
+                        });
+
+                }
+
+                sr.reveal('.js--fadeInLeft',
+                    {
+                        origin: 'left',
+                        distance: '300px',
+                        easing: 'ease-in-out',
+                        duration: 800,
+                    });
+
+                sr.reveal('.js--fadeInRight',
+                    {
+                        origin: 'right',
+                        distance: '300px',
+                        easing: 'ease-in-out',
+                        duration: 800,
+                    });
+            });
+
+    </script>
+</body>
+
+</html>
