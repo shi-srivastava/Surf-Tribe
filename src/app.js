@@ -10,6 +10,8 @@ const cookiePar = require("cookie-parser");
 const auth = require("./middleware/auth");
 let alert = require('alert');  
 
+
+
 //connect database
 connectDB();
 app.use(express.json());
