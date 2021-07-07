@@ -9,6 +9,7 @@
   },
   "author": "nishi",
   "license": "ISC",
+
   "dependencies": {
     "alert": "^5.0.10",
     "bcryptjs": "^2.4.3",
