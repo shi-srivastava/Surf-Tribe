@@ -10,12 +10,12 @@ const cookiePar = require("cookie-parser");
 const auth = require("./middleware/auth");
 let alert = require('alert');  
 
-
 //connect database
 connectDB();
 app.use(express.json());
 app.use(cookiePar());
 app.use(express.urlencoded({extended:false}));
+
 
 const port = process.env.PORT || 3000;
 const static_path = path.join(__dirname, "../public");
@@ -25,6 +25,7 @@ app.use(express.static(static_path));
 app.set("view engine", "hbs");
 app.set("views", template_path);
 hbs.registerPartials(partials_path);
+
 app.get("/",(req,res) => {
     res.render("index");
 });
@@ -70,8 +71,8 @@ app.post('/register', async (req,res) => {
             const registerEmployee = new Register({
                 name: req.body.name,
                 email: req.body.email,
-                password: req.body.password,
-                cpassword: req.body.copassword,
+                password: password,
+                cpassword: cpassword
             })
 
             const token = await registerEmployee.generateAuthToken();
