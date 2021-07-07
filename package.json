@@ -9,8 +9,8 @@
   },
   "author": "nishi",
   "license": "ISC",
-  "dependencies": 
-  {
+
+  "dependencies": {
     "alert": "^5.0.10",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.5",
