@@ -9,8 +9,9 @@
       rel="stylesheet"
       type="text/css"
     /> 
-    
-  <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/about.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     
@@ -173,8 +174,10 @@
         width: 75vw;
         height: 75vw ;
       }
-          
-    }
+      .centerflipcards{
+        display:inline-grid;
+      } 
+    }  
     .square,
     .square2 {
       width: 100%;
@@ -271,11 +274,11 @@
     }
 
     .square-container2 {
-      padding: 40px;
       text-align: center;
+      display: grid;
+      justify-content: center;
       position: relative;
       top: 50%;
-
       -ms-transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
       transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
       -webkit-transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
@@ -308,9 +311,9 @@
     /*Style text*/
     .square-flip h2 {
       color: white;
-      font-family: "	Courier New" ,"Lucida Console", "Monaco", monospace;
+      font-family: 'Arima Madurai', cursive;
       font-weight: 700;
-      font-size: 2vw; 
+      font-size:calc(16px + 6 * ((100vw - 450px) / 680)); 
       text-align: center;
     }
     .square-flip h3 {
@@ -335,18 +338,21 @@
       margin-left: auto;
       margin-right: auto;
     }
-    .viewdemo-button {
-      display: block;
-      width: 10vw;
-      padding: 1vw 2vw;
+    .viewdemo-button 
+    {
+      display: table;
+      width: fit-content;
+      padding: 1.0vh 1.2vw;
+      justify-self: center;
       font-family: "	Courier New" ,"Lucida Console", "Monaco", monospace;
+      font-size: 18px;
       color: #fff;
-      background: #ff2024;
       align-items: center;
       align-self: center;
-      border-radius: 10%;
       text-decoration: none;
-
+      background: linear-gradient(90deg, #00FCDE -10.49%, #4C00EE 108.64%);
+      box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 29px;
       /* Permalink - use to edit button  gradient: http://colorzilla.com/gradient-editor/#ffa067+0,ff2959+49,ff2024+100 */
        /* Old browsers */
       /* background: -moz-linear-gradient(
@@ -355,13 +361,13 @@
         #ff2959 49%,
         #ff2024 100%
       ); /* FF3.6-15 */
-      background: -webkit-linear-gradient(
+      /*background: -webkit-linear-gradient(
         -45deg,
         #67ffd9 0%,
         #2986ff 39%,
         #9320ff 100%
       ); /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(
+     /* background: linear-gradient(
         135deg,
         #67ffd9 0%,
         #2986ff 39%,
@@ -399,30 +405,29 @@
       -webkit-box-shadow: 240px 42px 58px -8px rgba(0, 0, 0, 0);
       -moz-box-shadow: 240px 42px 58px -8px rgba(0, 0, 0, 0);
       box-shadow: 240px 42px 58px -8px rgba(0, 0, 0, 0);
-      color: #15ff00;
-      text-align: center;
     }
 
     .square-flip .square2 .boxshadow {
       -webkit-box-shadow: 240px 42px 58px -8px rgba(0, 0, 0, 0);
       -moz-box-shadow: 240px 42px 58px -8px rgba(0, 0, 0, 0);
       box-shadow: 240px 42px 58px -8px rgba(0, 0, 0, 0);
-      color: #15ff00;
-      text-align: center;
     }
     .square-flip .square2 .textshadow {
       -webkit-text-shadow: 240px 42px 58px -8px rgba(0, 0, 0, 0);
       -moz-text-shadow: 240px 42px 58px -8px rgba(0, 0, 0, 0);
       text-shadow: 240px 42px 58px -8px rgba(0, 0, 0, 0);
-      color: #15ff00;
-      text-align: center;
     }
     .square-flip:hover .square2 .boxshadow,
     .square-flip:hover .square2 .textshadow {
       -webkit-box-shadow: 24px 42px 58px -8px rgba(0, 0, 0, 0.3);
       -moz-box-shadow: 24px 42px 58px -8px rgba(0, 0, 0, 0.3);
       box-shadow: 24px 42px 58px -8px rgba(0, 0, 0, 0.3);
-      color: #15ff00;
+      font-family: Cambria;
+      font-style: normal;
+      font-weight: normal;
+      color: #FFFFFF;
+      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+      
       text-align: center;
     }
   </style>

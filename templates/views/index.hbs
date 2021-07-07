@@ -1,48 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Stalemate&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/about.css">   
-    <link rel="icon" href="css/assets/Logo.svg">
-    <title>Surf Tribe</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Stalemate&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" href="css/assets/Logo.svg">
+  <style>
+    .contact-us {
+      background: linear-gradient(180deg, #FFFFFF 0%, #0276B7 100%);
+      display: block;
+    }
+  </style>
+  <title>Surf Tribe</title>
 </head>
+
 <body>
   <header>
     {{>navbar_before}}
   </header>
-    <div class="head">
-      <div class="heroimg">
-        <div class="maintext">
-          <div class="bottom-left">Surf Tribe</div>
-        </div>
-      </div>
+  <div class="hero-part">
+    {{>hero}}
+  </div>
+  <div class="body-content">
+    <div class="about-us">
+      {{>WhatWeDo}}
     </div>
-   <div class="about-us">  
-      <div class="contenthead" id="aboutus">What we do</div>
-      <div class="content-txt">
-          <img src="css/assets/Cleaning.png" align="right" class="cleaning">
-          <p class="text">Surf-Tribe is a web application that registers you for clean up drives organised for beaches near you.
-          Through our app,you can find a community of people who are willing to contribute their share in conserving nature. Join with hundreds
-          of such people and play your part.</p>
-      </div>
-    </div>
-    
-    
     <div class="contact-us">
       <div class="contenthead" id="contactus">Contact Us</div>
       <div class="contact-photo">
-          {{>about}}
+        {{>about}}
       </div>
-      <div class="wave" >
-        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      {{!-- Waves --}}
+      <div class="wave">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
           <defs>
             <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
           </defs>
@@ -54,18 +49,8 @@
           </g>
         </svg>
       </div>
-      </div>
+    </div>
     {{>footr}}
+  </div>
 
-    <title>Document</title>
-</head>
-<body>
-     {{>navbar}}
-       <div class="container">
-            <img src="css/assets/Hero 2.jpg" alt="Nature" class="responsive" width="1266px">
-            <div class="bottom-left">Surf Tribe</div>
-          </div>
-          {{>footr}}
-
-</body>
 </html>
